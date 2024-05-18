@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축구선수 맞추기 퀴즈</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+            background-image: url('https://example.com/champions-league-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #fff;
+        }
+        .quiz {
+            margin: 20px 0;
+        }
+        .quiz img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 80%;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .message {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>축구선수 맞추기 퀴즈</h1>
+        
+        <div class="quiz">
+            <img src="메시.jpg".jpg" alt="축구선수 이미지">
+            <p>힌트: 아르헨티나 출신, FC 바르셀로나와 파리 생제르맹에서 뛰었던 선수</p>
+            <input type="text" id="answer" placeholder="선수 이름 입력">
+            <button onclick="checkAnswer()">제출</button>
+            <p id="message" class="message"></p>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value.trim().toLowerCase();
+            const message = document.getElementById('message');
+            if (answer === 'lionel messi' || answer === 'messi') {
+                message.textContent = '정답입니다! 축하합니다!';
+                message.style.color = 'green';
+            } else {
+                message.textContent = '틀렸습니다. 다시 시도해보세요!';
+                message.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
